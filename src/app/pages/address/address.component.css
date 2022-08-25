@@ -1,0 +1,39 @@
+.container{
+    /* background-color: rgb(225, 223, 223); */
+    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 350px;
+
+}
+.div1{
+    background-color: white;
+    margin: auto;
+    padding-bottom: 30px;
+}
+form{
+    padding: 10px;
+}
+.btnn{
+    margin-top: 20px;
+}
+input{
+    margin: 3px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.form-control.ng-touched.ng-invalid{
+    border: 1px solid red   ;
+}
+.form-control.ng-touched.ng-valid{
+    border: 1px solid green  ;
+    box-shadow: 2px,3px,2px,white;
+}
+#country{
+    margin-left: 0;
+    padding-left: 0;
+}
+#countrycode{
+    margin-right: 0;
+    padding-right: 0;
+}

@@ -1,0 +1,7 @@
+.container{
+    margin-left: 292px;
+}
+::-webkit-input-placeholder {
+    /* color:rgb(26, 24, 24); */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

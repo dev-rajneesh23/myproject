@@ -1,0 +1,98 @@
+<div class="container ">
+    
+        <h4>Location details</h4>
+        <form class="row g-3" #contactForm="ngForm" (submit)="contactForm.form.valid && save(contactForm.value) "> 
+            <div class="div1 row g-3">
+                <div class="col-12">
+                    <input type="text" class="form-control" name="location_id" #lcid="ngModel" required  placeholder="Location id" ngModel [ngClass]="{ 'is-invalid': contactForm.submitted && lcid.invalid }">
+                    <div *ngIf="contactForm.submitted && lcid.invalid" class="invalid-feedback">
+                      <div *ngIf="lcid.errors">Location id Name is required</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" name="location_display_name" #ldname="ngModel" required  placeholder="Location display name" ngModel [ngClass]="{ 'is-invalid': contactForm.submitted && ldname.invalid }">
+                    <div *ngIf="contactForm.submitted && ldname.invalid" class="invalid-feedback">
+                      <div *ngIf="ldname.errors">Location display name  is required</div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" name="Location_contact_title" #ictitle="ngModel" required  placeholder="Location contact title" ngModel [ngClass]="{ 'is-invalid': contactForm.submitted && ictitle.invalid }">
+                    <div *ngIf="contactForm.submitted && ictitle.invalid" class="invalid-feedback">
+                      <div *ngIf="ictitle.errors">Location contact title Name is required</div>
+                    </div>
+                  </div>
+                  <div class="col-md-3" id="countrycode">
+                  <input class="form-control" list="country" #code="ngModel" name="countrycode" required placeholder="+91(India)" ngModel   ngModel [ngClass]="{ 'is-invalid': contactForm.submitted && code.invalid }"/>
+                  <div *ngIf="contactForm.submitted && code.invalid" class="invalid-feedback">
+                    <div *ngIf="code.errors">country code  is required</div>
+                  </div>
+                  <datalist id="country">
+                    <option value="+91(India)">
+                    <option value="+1(USA)">
+                    <option value="+5(UK)">
+                  </datalist>
+                  </div>
+                  <div class="col-md-9 " id="country"> 
+                    <input type="tel" class="form-control" name="Location_contact_number" #lcnum="ngModel" required  placeholder="Location contact number" ngModel [ngClass]="{ 'is-invalid': contactForm.submitted && lcnum.invalid }">
+                    <div *ngIf="contactForm.submitted && lcnum.invalid" class="invalid-feedback">
+                      <div *ngIf="lcnum.errors">Location contact number  is required</div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" name="Location_contact_name" #lcname="ngModel" required  placeholder="Location contact name" ngModel [ngClass]="{ 'is-invalid': contactForm.submitted && lcname.invalid }">
+                    <div *ngIf="contactForm.submitted && lcname.invalid" class="invalid-feedback">
+                      <div *ngIf="lcname.errors">Location contact name  is required</div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <input type="email" class="form-control" name="Location_contact_email" #lcemail="ngModel" required  placeholder="Location contact email" ngModel [ngClass]="{ 'is-invalid': contactForm.submitted && lcemail.invalid }">
+                    <div *ngIf="contactForm.submitted && lcemail.invalid" class="invalid-feedback">
+                      <div *ngIf="lcemail.errors">Location contact email Name is required</div>
+                    </div>
+                  </div>
+                  
+            <h4>Address details</h4>
+            <div class="col-12">
+              <input type="text" class="form-control" name="address" required  placeholder="search address....." ngModel>
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control" #street="ngModel" name="street" required placeholder="street" ngModel [ngClass]="{ 'is-invalid': contactForm.submitted && street.invalid }">
+                <div *ngIf="contactForm.submitted && street.invalid" class="invalid-feedback">
+                    <div *ngIf="street.errors">street Name is required</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" #city="ngModel" name="city" required placeholder="city" ngModel   [ngClass]="{ 'is-invalid': contactForm.submitted && city.invalid }">
+                <div *ngIf="contactForm.submitted && city.invalid" class="invalid-feedback">
+                    <div *ngIf="city.errors">city Name is required</div>
+                </div>
+
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" name="state" #state="ngModel" required placeholder="state" ngModel [ngClass]="{ 'is-invalid': contactForm.submitted && state.invalid }">
+                <div *ngIf="contactForm.submitted && state.invalid" class="invalid-feedback">
+                    <div *ngIf="state.errors">state Name is required</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" name="country" #country="ngModel" required placeholder="country" ngModel [ngClass]="{ 'is-invalid': contactForm.submitted && country.invalid }">
+                <div *ngIf="contactForm.submitted && country.invalid" class="invalid-feedback">
+                    <div *ngIf="country.errors">country Name is required</div>
+                </div>
+              </div>
+            <div class="col-12">
+              <input type="text" class="form-control" name="postal" #postal='ngModel' required placeholder="postal code" ngModel [ngClass]="{ 'is-invalid': contactForm.submitted && postal.invalid }">
+              <div *ngIf="contactForm.submitted && postal.invalid" class="invalid-feedback">
+                <div *ngIf="postal.errors">postal Name is required</div>
+            </div>
+
+            </div> 
+        </div>
+        <div class="btnn col-12">
+            <button type="button" class="btn btn-light">cancel</button> &nbsp; &nbsp;
+            <button type="submit"  class="btn btn-danger">submit</button>
+          </div>
+    </form>  
+</div>

@@ -1,0 +1,83 @@
+<div class="container ">
+    
+  <h4>Location Details</h4>
+  <form class="row g-3" [formGroup]="myForm" (ngSubmit)="savedata()" #localform="ngForm"> 
+      <div class="div1 row g-3">
+          <div class="col-12">
+              <input type="text" class="form-control" name="location_id" required  placeholder="Location id"  formControlName="locationid" [ngClass]="{'is-invalid':localform.submitted && myForm.get('locationid')?.invalid|| myForm.get('locationid')?.touched && myForm.get('locationid')?.invalid}">
+              <span class="invalid-feedback"> Location id is required</span>
+
+
+          </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" name="location_display_name" required  placeholder="Location display name" formControlName="ldname" [ngClass]="{'is-invalid':localform.submitted && myForm.get('ldname')?.invalid|| myForm.get('ldname')?.touched && myForm.get('ldname')?.invalid}">
+              <span class="invalid-feedback"> Location display name  is required</span>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" name="Location_contact_title" required  placeholder="Location contact title" formControlName="lctitle" [ngClass]="{'is-invalid':localform.submitted && myForm.get('lctitle')?.invalid|| myForm.get('lctitle')?.touched && myForm.get('lctitle')?.invalid}">
+              <span class="invalid-feedback"> Location contect details  is required</span>
+             
+            </div>
+            <div class="col-md-3" id="countrycode">
+            <input class="form-control" list="country" name="countrycode" required placeholder="+91(India)" formControlName="ctrycode" [ngClass]="{'is-invalid':localform.submitted && myForm.get('ctrycode')?.invalid|| myForm.get('ctrycode')?.touched && myForm.get('ctrycode')?.invalid}"/>
+            <span class="invalid-feedback"> Country code  is required</span>
+            <datalist id="country">
+              <option value="+91(India)">
+              <option value="+1(USA)">
+              <option value="+5(UK)">
+            </datalist>
+            </div>
+            <div class="col-md-9 " id="country"> 
+              <input type="tel" class="form-control" name="Location_contact_number" required  placeholder="Location contact number" formControlName="lcnumber" [ngClass]="{'is-invalid':localform.submitted && myForm.get('lcnumber')?.invalid || myForm.get('lcnumber')?.touched && myForm.get('lcnumber')?.invalid}"/>
+            <span class="invalid-feedback"> Location contect number is required</span> 
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" name="Location_contact_name" required  placeholder="Location contact name"  formControlName="lcname" [ngClass]="{'is-invalid':localform.submitted && myForm.get('lcname')?.invalid|| myForm.get('lcname')?.touched && myForm.get('lcname')?.invalid}" />
+            <span class="invalid-feedback"> Location contect name is required</span>
+            
+
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" name="Location_contact_email"  required  placeholder="Location contact email" formControlName="lcemail" [ngClass]="{'is-invalid':localform.submitted && myForm.get('lcemail')?.invalid|| myForm.get('lcemail')?.touched && myForm.get('lcemail')?.invalid}">
+            <span class="invalid-feedback"> Location contect email is required</span>
+
+             </div>
+            
+      <h4>Address details</h4>
+      <div class="col-12">
+        <input type="text" class="form-control" name="address"  placeholder="search address....." formControlName="address" >
+      </div>
+      <div class="col-md-6">
+          <input type="text" class="form-control" name="street" required placeholder="street" formControlName="street" [ngClass]="{'is-invalid':localform.submitted && myForm.get('street')?.invalid || myForm.get('street')?.touched && myForm.get('street')?.invalid }">
+          <span class="invalid-feedback" >Street is required</span>
+          </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control" name="city" required placeholder="city" formControlName="city" [ngClass]="{'is-invalid':localform.submitted && myForm.get('city')?.invalid || myForm.get('city')?.touched && myForm.get('city')?.invalid}">
+        <span class="invalid-feedback"> City name is required</span>
+
+          
+        </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control" name="state" required placeholder="state" formControlName="state" [ngClass]="{'is-invalid':localform.submitted && myForm.get('state')?.invalid || myForm.get('state')?.touched && myForm.get('state')?.invalid}">
+        <span class="invalid-feedback"> State is required</span>
+
+
+        </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control" name="country"  required placeholder="country" formControlName="country" [ngClass]="{'is-invalid':localform.submitted && myForm.get('country')?.invalid || myForm.get('country')?.touched && myForm.get('country')?.invalid}">
+        <span class="invalid-feedback"> country is required</span>
+           
+         </div>
+      <div class="col-12">
+        <input type="text" class="form-control" name="postal"  required placeholder="postal code" formControlName="postal" [ngClass]="{'is-invalid':localform.submitted && myForm.get('postal')?.invalid || myForm.get('postal')?.touched && myForm.get('postal')?.invalid}">
+        <span class="invalid-feedback"> postal is required</span>
+               
+          
+      </div> 
+  </div>
+  <div class="btnn col-12">
+      <button type="button" class="btn btn-info">cancel</button> &nbsp; &nbsp;
+      <button type="submit"   class="btn btn-danger">submit</button>
+    </div>
+</form>  
+</div>

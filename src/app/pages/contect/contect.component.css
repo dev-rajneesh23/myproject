@@ -1,0 +1,43 @@
+.container{
+    /* background-color: rgb(225, 223, 223); */
+    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 350px;
+
+}
+.div1{
+    background-color: white;
+    margin: auto;
+    padding-bottom: 30px;
+}
+form{
+    padding: 10px;
+}
+.btnn{
+    margin-top: 20px;
+}
+input{
+    margin: 3px;
+    padding: 10px;
+    border: 1px solid black;
+}
+span{
+    color: red;
+}
+input.ng-invalid.ng-touched{
+    border: red 1px solid;
+}
+::-webkit-input-placeholder {
+    color:black;
+    opacity: 1 !important; /* for older chrome versions. may no longer apply. */
+    font-family:'Courier New', Courier, monospace;
+    
+}
+#country{
+    margin-left: 0;
+    padding-left: 0;
+}
+#countrycode{
+    margin-right: 0;
+    padding-right: 0;
+}

@@ -1,0 +1,22 @@
+<div class="container  w-50">
+    
+    <h4>Location details</h4>
+    <form class="row g-3" [formGroup]="myForm" (ngSubmit)="onSubmit()" #localform="ngForm"> 
+    
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="location_id" required  placeholder="Location id"  formControlName="locationid" [ngClass]="{'is-invalid':localform.submitted && myForm.get('locationid')?.invalid}">
+                <span *ngIf="lid?.touched && lid?.invalid" class="invalid-feedback"> location id is required</span>
+                <!-- <span  style="color: red;">location display name is required</span> -->
+
+            </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" name="location_display_name" required  placeholder="Location display name" formControlName="ldname" [ngClass]="{'is-invalid':localform.submitted && myForm.get('ldname')?.invalid}">
+                <span  class="invalid-feedback"> location id is required</span>
+              
+              </div>
+              <div class="btnn col-12">
+                <button type="button" class="btn btn-light">cancel</button> &nbsp; &nbsp;
+                <button type="submit"  class="btn btn-danger">submit</button>
+              </div>
+   </form>
+     </div>
